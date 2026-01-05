@@ -1,2 +1,66 @@
 # 5-Day-AI-Agents-Intensive-Course-with-Google-Capstone-Project
 SmartClaimX is a multi-agent AI system that automates health insurance claim validation. It coordinates specialized agents for policy coverage, fraud detection, medical validity, and cost estimation to produce structured, explainable claim decisions using Google Gemini and ADK workflows.
+
+---
+
+### 🔹 Features
+- **End-to-End Claim Analysis:** Takes raw claim text and outputs a structured decision:  
+  ✔ Approve | ❌ Reject | ⚠ Review / Investigate  
+- **Explainable Decisions:** Per-agent outputs clarify why each claim was evaluated that way.  
+- **Fully Automated & Modular:** Easy to extend to real insurance datasets.  
+
+---
+
+### 🔹 Multi-Agent Architecture (A2A – Agent-to-Agent Workflow)
+SmartClaimX uses specialized agents for specific tasks:
+
+| Agent | Role |
+|-------|------|
+| `PolicyCheckerAgent` | Checks policy rules and coverage |
+| `FraudDetectorAgent` | Detects suspicious patterns |
+| `MedicalValidationAgent` | Validates medical correctness using ICD mappings |
+| `CostEstimatorAgent` | Extracts claimed amount & verifies reasonability |
+| `CoordinatorAgent` | Orchestrates all agents & produces final decision |
+
+**Workflow:** Parallel reasoning with sequential pipeline orchestration ensures efficiency and accuracy.  
+
+---
+
+### 🔹 Core Concepts & Tools
+- **Parallel Agents:** Concurrent reasoning for faster analysis  
+- **Sequential Agent Pipeline:** Structured task execution  
+- **FunctionTool:** Python function execution for agent tasks  
+- **InMemoryRunner:** Local simulation of workflows  
+- **Observability:** Session memory & logging for transparency  
+- **GUI Interface:** Interactive control via `ipywidgets`  
+
+---
+
+### 🔹 Technology Stack
+- **Agent Platform:** Google Agent Development Kit (ADK)  
+- **AI Models:** Gemini 2.0  
+- **Programming Language:** Python  
+- **Interface:** Jupyter notebook / ipywidgets  
+
+---
+
+### 🔹 How It Works
+1. Input raw claim text  
+2. Coordinator dispatches tasks to specialized agents  
+3. Agents process the claim concurrently and sequentially as needed  
+4. Outputs are combined into a final decision with detailed reasoning  
+
+---
+
+### 🔹 Example Output
+```json
+{
+  "decision": "Review",
+  "reason": "Claim amount exceeds policy limit; medical diagnosis requires verification",
+  "agent_outputs": {
+    "PolicyCheckerAgent": "Partial coverage; policy limit exceeded",
+    "FraudDetectorAgent": "No suspicious patterns detected",
+    "MedicalValidationAgent": "Diagnosis matches ICD codes",
+    "CostEstimatorAgent": "Claim amount higher than average for procedure"
+  }
+}
