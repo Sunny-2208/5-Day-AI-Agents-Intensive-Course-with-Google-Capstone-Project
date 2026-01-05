@@ -51,16 +51,3 @@ SmartClaimX uses specialized agents for specific tasks:
 4. Outputs are combined into a final decision with detailed reasoning  
 
 ---
-
-### 🔹 Example Output
-```json
-{
-  "decision": "Review",
-  "reason": "Claim amount exceeds policy limit; medical diagnosis requires verification",
-  "agent_outputs": {
-    "PolicyCheckerAgent": "Partial coverage; policy limit exceeded",
-    "FraudDetectorAgent": "No suspicious patterns detected",
-    "MedicalValidationAgent": "Diagnosis matches ICD codes",
-    "CostEstimatorAgent": "Claim amount higher than average for procedure"
-  }
-}
