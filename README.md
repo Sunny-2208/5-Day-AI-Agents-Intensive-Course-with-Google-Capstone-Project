@@ -1,6 +1,8 @@
 # 5-Day-AI-Agents-Intensive-Course-with-Google-Capstone-Project
 SmartClaimX is a multi-agent AI system that automates health insurance claim validation. It coordinates specialized agents for policy coverage, fraud detection, medical validity, and cost estimation to produce structured, explainable claim decisions using Google Gemini and ADK workflows.
 
+<img width="1562" height="784" alt="image" src="https://github.com/user-attachments/assets/d35fee13-cd0e-4592-b77d-80aa4c41c35f" />
+
 ---
 
 ### 🔹 Features
