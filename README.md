@@ -50,6 +50,29 @@ SmartClaimX uses specialized agents for specific tasks:
 1. Input raw claim text  
 2. Coordinator dispatches tasks to specialized agents  
 3. Agents process the claim concurrently and sequentially as needed  
-4. Outputs are combined into a final decision with detailed reasoning  
+4. Outputs are combined into a final decision with detailed reasoning
+
+
+## 🚀 How to Run on Kaggle  
+
+### 1. Open the Notebook
+- Open this project in **Kaggle Notebook** (either fork or upload).  
+
+---
+
+### 2. Add Google API Key in Kaggle Secrets
+1. In Kaggle, go to **Add-ons → Secrets**.  
+2. Click **New Secret**.  
+3. Enter:  
+   - **Secret Name:** `GOOGLE_API_KEY`  
+   - **Secret Value:** (Paste your API Key from [Google AI Studio](https://aistudio.google.com/app/apikey))  
+4. Save it.  
+
+---
+
+### 3. Run the Notebook 
+- Click on Run All 
+- Paste sample report pdf or paste the report in text box
+- Click Analyze Report
 
 ---
